@@ -1,8 +1,10 @@
 import type { MetadataRoute } from "next";
 import { categories, tools } from "@/data/tools";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://aioc.tools";
+  const base = "https://aioc-tools.web.app";
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${base}`, lastModified: new Date(), changeFrequency: "daily", priority: 1.0 },
